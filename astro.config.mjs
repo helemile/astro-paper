@@ -25,6 +25,7 @@ export default defineConfig({
         {
           test: "Table of contents",
         },
+        
       ],
     ],
     shikiConfig: {

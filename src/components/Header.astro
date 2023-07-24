@@ -27,7 +27,7 @@ const { activeNav } = Astro.props;
               height={LOGO_IMAGE.height}
             />
           ) : (
-            SITE.title
+            <span>{SITE.title}</span>
           )
         }
       </a>
@@ -60,17 +60,17 @@ const { activeNav } = Astro.props;
         <ul id="menu-items" class="display-none sm:flex">
           <li>
             <a href="/posts" class={activeNav === "posts" ? "active" : ""}>
-              Posts
+              文章
             </a>
           </li>
           <li>
             <a href="/tags" class={activeNav === "tags" ? "active" : ""}>
-              Tags
+              标签
             </a>
           </li>
           <li>
             <a href="/about" class={activeNav === "about" ? "active" : ""}>
-              About
+              关于
             </a>
           </li>
           <li>
@@ -127,6 +127,7 @@ const { activeNav } = Astro.props;
   }
   .top-nav-wrap {
     @apply relative flex w-full items-start justify-between p-4 sm:items-center sm:py-8;
+    white-space: nowrap;
   }
   .logo {
     @apply absolute py-1 text-xl font-semibold sm:static sm:text-2xl;
