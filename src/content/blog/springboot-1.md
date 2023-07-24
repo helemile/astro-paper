@@ -47,7 +47,7 @@ description: 我们知道，`IT` 界使用 `Java` 做 `Web` 应用开发已有`2
 
 ### a. 加载配置文件
 
-`Sring Boot`在启动时，会加载`spring.factories`里的属性`org.springframework.boot.autoconfigure.EnableAutoConfiguration`
+`Sring Boot`在启动时，会加载`spring.factories`里的属性`EnableAutoConfiguration`
 
 属性中配置了`Sping Boot`支持的所有自动配置类(项目中通常会使用这种模式进行功能的扩展～)
 
