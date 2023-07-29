@@ -3,8 +3,6 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-本人现在工作于深信服
-
 🌱 个人比较擅长 Spring Boot、Spring Cloud 框架，Mysql、Java 以及 Docker 等
 
 👯 喜欢旅行、阅读以及分享
