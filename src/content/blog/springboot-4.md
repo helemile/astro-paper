@@ -16,7 +16,7 @@ description: Spring Data JPA 旨在通过将工作量减少到实际需要的数
 
 提到 **JPA** 操作数据库，有的人惊叹于它的简洁与强大，有些人则会觉得不够灵活，影响实战效率，那么究竟 **JPA** 为何让人又爱又恨呢？
 
-![](https://files.mdnice.com/user/13208/8eec02e1-0a8d-4d12-b814-ef1f2245e406.png)
+![Alt text](image.png)
 
 # 一 原理:战前磨刀
 
@@ -351,5 +351,7 @@ findByNameOrderByCreateTimeDesc(String name)
 `Spring Boot`往期系列文章回顾：
 
 [`Spring Boot`（三）：操作数据库-Spring JDBC](https://mp.weixin.qq.com/s?__biz=MzIwMTY3NjY3MA==&mid=2247483779&idx=1&sn=6ce5bbd2d8028b176ecf3b1b7fa8f3ea&chksm=96eb0392a19c8a84f1e7356a36012a2ef2f17f4d70f60c83ea42c1e72ed5a561c18d1782577e&scene=21#wechat_redirect)
+
 [`Spring Boot`（二）：第一个`Spring Boot`项目](https://mp.weixin.qq.com/s?__biz=MzIwMTY3NjY3MA==&mid=2247483751&idx=1&sn=90bb32f21dbfd6793b899ac4cb04d52f&chksm=96eb0376a19c8a60eb9ea0b8227b3e34d55efb0feb6e1aa944d90514333f2be70635b8bc820c&scene=21#wechat_redirect)
+
 [`Spring Boot`（一）：特性概览](https://mp.weixin.qq.com/s?__biz=MzIwMTY3NjY3MA==&mid=2247483725&idx=1&sn=c1399fcb817d5a434f272b93abd36798&chksm=96eb035ca19c8a4ac715cf62f4cfe301e0124e7b800c87b3ae78503190bbb8ec5e2754ce3fd4&scene=21#wechat_redirect)
