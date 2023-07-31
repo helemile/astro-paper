@@ -14,8 +14,6 @@ tags:
 description: Spring Boot 系列文章第二弹开始啦~上一篇文章中我们概述了`Spring Boot`特性、优缺点等，相信你对它有了一定印象。今天，让我们一起动手开始第一个SpringBoot项目吧
 ---
 
-## 目录
-
 ## 简介
 
 `Spring Boot`访问数据库，常用的方式有 Mybaits、Hibernate 以及`Spring Boot`提供的 JDBC 这三种方式。其中，`Spring JDBC`，是`Spring`中最基本、最底层的访问数据库的实现方式。

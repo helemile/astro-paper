@@ -13,8 +13,6 @@ tags:
 description: 我们知道，`IT` 界使用 `Java` 做 `Web` 应用开发已有`20`年左右的历史，现如今已经成为一个成熟的语言。而最受`Java`开发者喜爱的框架当属`Spring`，`Spring`也随之成为了在`Java EE`开发中真正意义上的标准。
 ---
 
-## 目录
-
 近两年，`Spring Boot`成为了 java web 开发主框架，日益风行。那么，究竟为什么要用`Spring Boot`呢？
 
 ## 1. SpringBoot 诞生
