@@ -1,7 +1,7 @@
 ---
 title: Spring Boot（七）：你不能不知道的Mybatis缓存机制！
 author: 杰哥
-pubDatetime: 2023-07-31T16:08:06.130Z
+pubDatetime: 2023-08-21T16:08:06.130Z
 postSlug: spring-boot-7
 featured: false
 draft: false
