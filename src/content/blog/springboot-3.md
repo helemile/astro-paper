@@ -11,7 +11,7 @@ tags:
   - 微服务
   - 源码解析
   - JDBC
-description: Spring Boot 系列文章第二弹开始啦~上一篇文章中我们概述了`Spring Boot`特性、优缺点等，相信你对它有了一定印象。今天，让我们一起动手开始第一个SpringBoot项目吧
+description: Spring Boot 系列文章第二弹开始啦~上一篇文章中我们概述了 Spring Boot 特性、优缺点等，相信你对它有了一定印象。今天，让我们一起动手开始第一个 SpringBoot 项目吧
 ---
 
 ## 简介

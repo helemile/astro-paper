@@ -11,7 +11,7 @@ tags:
   - 微服务
   - 源码解析
   - Mybatis
-description: 在 **JavaWeb** 项目开发中，我们使用最多的 **ORM** 框架可能就是 **Mybatis** 了，那么对于常用的 **Mybatis**，你究竟了解多少呢？
+description: 在 JavaWeb 项目开发中，我们使用最多的 ORM 框架可能就是 Mybatis 了，那么对于常用的 Mybatis，你究竟了解多少呢？
 ---
 
 ## 目录
