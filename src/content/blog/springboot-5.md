@@ -44,7 +44,7 @@ description: 在 JavaWeb 项目开发中，我们使用最多的 ORM 框架可�
 
 ## 04. Mybatis 的执行流程
 
-![](https://files.mdnice.com/user/13208/c528dcd7-bbb2-4bff-aee7-b37abc9b539e.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp5/执行流程1.png)
 
 1） **加载配置**
 
@@ -83,23 +83,23 @@ f 关闭数据库
 
 1）建立连接
 
-![](https://files.mdnice.com/user/13208/a00bf80c-76cd-4c58-a95f-98ec61e95978.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp5/2-建立连接.png)
 
 2）获取 **xml** 文件与接口中的对应方法
 
-![](https://files.mdnice.com/user/13208/cd348dd1-ad1a-497f-9bb8-fc064c9faf20.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp5/3-对应方法.jpg)
 
 3）创建 **statement**，并执行 **sql** 语句，返回结果集
 
-![](https://files.mdnice.com/user/13208/94fc59f5-2f70-42b2-a02c-11c9607ee9b9.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp5/4-返回结果集2.png)
 
-![](https://files.mdnice.com/user/13208/80ee2fd0-5611-4059-8747-0e6591d49494.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp5/4-返回结果集.png)
 
 4）在这几步结束之后，会关闭 **statement**
 
 5）关闭连接
 
-![](https://files.mdnice.com/user/13208/22877bf4-7d76-47c0-b630-83ce614096b1.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp5/5-关闭连接.png)
 
 其中，我们需要知道的是，**Spring** 会根据我们引入的数据库类型，预先加载数据库的驱动。因此 **Mybatis** 执行数据库的流程，实际上就是 **JDBC** 的 **6** 大步骤
 
@@ -117,7 +117,7 @@ f 关闭数据库
 
 嗯，怎么说呢，它们的好，谁用谁知道呢~
 
-![](https://files.mdnice.com/user/13208/2bd7cdeb-1932-48d8-93e1-611c686dfe78.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp5/6-一般人不告诉.gif)
 
 # 二 实战:实战环节
 
@@ -193,13 +193,13 @@ public class User implements Serializable {
 
 **Mybatis** 提供了很多操作注解，如下
 
-![](https://files.mdnice.com/user/13208/4ab7283d-f68d-4df2-97e9-5e0b57cd7bba.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp5/7-如下.png)
 
 **Mybatis** 的注解方式，是使用这些操作注解，将 **sql** 语句写入这些注解中，进行数据库的操作的（其中结尾为 **Provider** 的注解，用于语句构建器方式）
 
 我们只需要在接口上添加 **@Mapper** 注解，然后直接使用这些注解进行方法的定义
 
-![](https://files.mdnice.com/user/13208/20a6c06f-5f57-446e-87fc-78ae712db7fa.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp5/8-方法的定义.png)
 
 我们分别定义了数据库的新增和根据 id 查找记录这两个方法
 
@@ -250,7 +250,7 @@ public interface UserMapperWithBuilder {
 
 **a 建立与接口映射的 xml 文件 UserMapper.xml**
 
-![](https://files.mdnice.com/user/13208/f623927f-a06f-4ee8-91b6-20987c9dd8e0.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp5/9-.xml)
 
 **b 建立相应的映射接口**
 
@@ -343,7 +343,7 @@ ApplicationRunner {
 
 运行项目，你就可以看到各个功能纷纷都实现啦，演示一下通过 xml 方式实现的日志打印效果
 
-![](https://files.mdnice.com/user/13208/a351e754-8214-4188-980a-171b6396c8e4.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp5/10-打印效果.jpg)
 
 我们可以看到，日志中不仅为我们打印出来了格式化以后的 sql 语句，还将输出了 **sqlSession** 的创建与关闭等信息。所以在平时采用配置文件中所配置的日志输出方式还是挺好用的呢。
 
@@ -351,7 +351,7 @@ ApplicationRunner {
 
 如果跟着文章的思路一路走到这里的话，那么恭喜你， **Mybatis** 的三种操作数据库的方式，你已经全部学会啦~
 
-![](https://files.mdnice.com/user/13208/e10592ea-7b77-491b-a5db-f0f7a67584a0.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp5/12-强大.gif)
 
 # 三 总结：总而言之
 
@@ -369,7 +369,7 @@ ApplicationRunner {
 
 虽然步骤相对比较麻烦，但是它最为灵活，也最为简洁，代码看起来更清爽，使用久了，也并不会觉得麻烦了。
 
-![](https://files.mdnice.com/user/13208/4abce0e9-6477-4595-bb0d-a1abb3375d8b.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp5/13-说的对.gif)
 
 今天一起重新学习了 **Mybatis** ，总体来说，有以下几点：
 

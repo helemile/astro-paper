@@ -23,17 +23,17 @@ description: 数据库连接池，在我们与数据库操作工程中所起的�
 
 目前最热门的数据库连接池，就要属阿里巴巴的 **Druid** 以及 **HikariCP** 了，它们也分别是 **Spring Boot 1.x** 和 **Spring Boot 2.x** 默认的数据库连接池。因此，今天我们主要来聊聊这两种好用的数据库连接池
 
-![](https://files.mdnice.com/user/13208/95c7bc4b-0a33-45d3-95c2-02b9fb06c986.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp6/dog.jpg)
 
 # 一 理论: HikariCP
 
 官网地址：**https://github.com/brettwooldridge/HikariCP**
 
-![](https://files.mdnice.com/user/13208/d97ab30b-0466-4b03-9b68-69fb001f58c3.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp6/光.png)
 
 图一
 
-![](https://files.mdnice.com/user/13208/f1e322a5-e896-494c-bb62-e24b9d153322.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp6/光2.jpg)
 
 图二
 
@@ -53,11 +53,11 @@ description: 数据库连接池，在我们与数据库操作工程中所起的�
 
 动态代理的实现在 **ProxyFactory** 类，源码如下
 
-![](https://files.mdnice.com/user/13208/5874af5a-4789-4186-9c33-112aba3d1b0b.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp6/3-源码如下.jpg)
 
 我们发现这些代理方法中只有一行抛异常的处理代码，注释写着“**Body is replaced (injected) by JavassistProxyFactory**”，其实方法 **body** 中的代码是在编译时调用 **JavassistProxyFactory** 才生成的，编译后的 **JavassistProxyFactory.class** 类代码如下图
 
-![](https://files.mdnice.com/user/13208/e9039950-3955-42d9-8a23-20fbd00a6727.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp6/4-如下图.jpg)
 
 之所以使用 **Javassist** 生成动态代理，是因为其速度更快，相比于 **JDK Proxy** 生成的字节码更少，精简了很多不必要的字节码
 
@@ -71,19 +71,19 @@ description: 数据库连接池，在我们与数据库操作工程中所起的�
 
 而为何这样就会加快效率呢？
 
-![](https://files.mdnice.com/user/13208/1b24ac6e-29a2-4ac3-94b1-70aa0c14d87d.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp6/5-效率呢？.jpg)
 
 **ArrayList** 执行 **get（int index）**方法时，对每个对象都要检查。而使用 **FastList** 则不需要
 
-![](https://files.mdnice.com/user/13208/b53aed7b-1c00-4f7b-9a1c-4c095227efaf.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp6/6-则不需要.png)
 
-![](https://files.mdnice.com/user/13208/0804286a-4843-4152-8978-adf23876870f.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp6/6-则不需要2.png)
 
 可以看到，使用 **FastList** 时，由于直接定义的就是一个固定长度的数组，那么范围就是可以保证的，因此在 **get** 方法中，直接使用元素索引找到特定元素，就不需要对每个对象都进行检查了
 
 此外，**ArrayList** 的 **remove**（**Object**）是从头到尾进行扫描，但是 **JDBC** 编程中的常见模式是在使用后立即关闭 **Statement**，或者以打开的相反顺序关闭 **Statement**。对于这些情况，其实从尾部开始的扫描会更好
 
-![](https://files.mdnice.com/user/13208/60ee7e3b-fd3d-4a51-b9b1-4690bcc69a6d.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp6/7-会更好.png)
 
 我们可以看到，**FastList** 改造了 **remove**(**Object**) 方法，采用从后往前的顺序进行对象的删除
 
@@ -109,11 +109,11 @@ description: 数据库连接池，在我们与数据库操作工程中所起的�
 
 1）首先，**Spring Boot** 的 **starter-jdbc** 依赖中，就自动引入了 **HikariCP** 连接池的依赖
 
-![](https://files.mdnice.com/user/13208/880e327c-8901-4431-a356-70b2c8ed7b92.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp6/8-的以来.png)
 
 2）查看数据库配置类 **DataSourceConfiguration** 对 **HicariCP** 的配置
 
-![](https://files.mdnice.com/user/13208/521fe256-5560-48ab-bf9e-ac92e6617676.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp6/9-的配置.jpg)
 
 当定义了 **HikariDataSource** 类（存在于第一步中自动引入的 HicariCP 依赖中），未定义 **DataSource** 类，并且有 **spring.datasource.type** 属性为 **com.zaxxer.hikari.HikariDataSource**，当然 **matchIfMissing = true** 表示即使不设置，也符合条件
 
@@ -157,7 +157,7 @@ spring.datasource.druid.filter.stat.slow-sql-millis=100
 
 众多扩展点，方便进行定制
 
-![](https://files.mdnice.com/user/13208/b6d6beef-1fe0-4621-9b41-fa70221a60df.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp6/10-进行定制.png)
 
 各个扩展点分别通过继承类 **FilterEventAdapter**，分别进行不同功能的扩展。通过源码可以看到，包括建立连接之前，**statement** 执行 sql 语句之前、之后可以做什么等
 
@@ -190,7 +190,7 @@ spring.datasource.druid.filter.wall.config.drop-table-allow=false
 
 下面是 **ExceptionSorter** 接口，各个数据库实现类通过实现这个接口，进行方法的定制化覆盖
 
-![](https://files.mdnice.com/user/13208/fa56e0be-ffc2-44f5-9594-543e288c253c.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp6/11-定制化覆盖.jpg)
 
 Spring Boot 会根据我们引入的数据库驱动依赖，来对应不同数据库的返回码处理
 
@@ -210,7 +210,7 @@ Spring Boot 会根据我们引入的数据库驱动依赖，来对应不同数�
 
 ### 1）引入依赖
 
-![](https://files.mdnice.com/user/13208/45aa6ab9-0290-4dec-90f0-fffe0fc9a0ee.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp6/12-引入以来.png)
 
 ### 2) 属性配置
 
@@ -226,7 +226,7 @@ spring.datasource.password=123456
 
 日志打印如下：
 
-![](https://files.mdnice.com/user/13208/65f5d8f8-9792-4bdd-b546-a97fa6ce25b7.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp6/13-打印如下.png)
 
 如图所示，项目默认使用的是 HicariCP 连接池
 
@@ -234,7 +234,7 @@ spring.datasource.password=123456
 
 1）引入依赖
 
-![](https://files.mdnice.com/user/13208/91089a7f-77fa-4c25-abc6-0ed1d289d274.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp6/14-引入以来.png)
 
 引入 **druid** 数据源，并排除掉 jdbc 中的 **HicariCP** 依赖。
 
@@ -291,7 +291,7 @@ public class ConnectionLogFilter extends FilterEventAdapter {
 
 **b 创建 druid-filter.properties 文件，配置该扩展类**
 
-![](https://files.mdnice.com/user/13208/6724a68b-9afa-47db-bca7-6c0a9141e094.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp6/15-扩展类.png)
 
 **c 配置类中进行配置**
 
@@ -305,7 +305,7 @@ spring.datasource.druid.filters=conn,config,stat,slf4j
 
 如下所示，项目已经切换到了 **druid** 连接池。并实现了扩展类
 
-![](https://files.mdnice.com/user/13208/d2ce3ce0-a760-439f-b35f-1b4415956201.png)
+![](https://cdn.jsdelivr.net/gh/helemile/Spring-Boot-Notes@dependabot/maven/activiti/activiti_demo/junit-junit-4.13.1/img_sp6/16-实现了扩展类.jpg)
 
 # 四 总结：总而言之
 
