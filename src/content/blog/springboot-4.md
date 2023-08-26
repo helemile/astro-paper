@@ -16,7 +16,7 @@ description: Spring Data JPA 旨在通过将工作量减少到实际需要的数
 
 提到 **JPA** 操作数据库，有的人惊叹于它的简洁与强大，有些人则会觉得不够灵活，影响实战效率，那么究竟 **JPA** 为何让人又爱又恨呢？
 
-![Alt text](image.png)
+![](https://cdn.jsdelivr.net/gh/helemile/notes@main/img_sp4/11.gif)
 
 # 一 原理:战前磨刀
 
@@ -278,21 +278,21 @@ public class SpringBootJpaApplication implements ApplicationRunner {
 
 通过运行项目，我们可以通过打印出的 sql 语句看到，**JPA** 在服务启动时，分别为我们创建了对应于实体类 **User** 的 **user** 表,并生成了序列化主键 id
 
-![](https://files.mdnice.com/user/13208/673f169e-f238-4aca-b406-e80b53183c76.png)
+![](https://cdn.jsdelivr.net/gh/helemile/notes@main/img_sp4/22.jpeg)
 
 接着执行了数据库的插入操作，成功插入一条数据
 
-![](https://files.mdnice.com/user/13208/528ae086-9740-422a-bae3-58eef431089e.png)
+![](https://cdn.jsdelivr.net/gh/helemile/notes@main/img_sp4/33.png)
 
 最后，执行数据库的查询语句，查询出我们所添加的一条 user 记录
 
-![](https://files.mdnice.com/user/13208/196a5a56-db0f-4edf-86a2-ca53c62ca8bb.png)
+![](https://cdn.jsdelivr.net/gh/helemile/notes@main/img_sp4/44.jpeg)
 
 回顾一下，我们的主要的操作其实就只是实现了 **@CrudRepository** 接口，然后直接调用其方法，就可以操作数据库了
 
 那么，简单的数据库操作就实现啦~
 
-![](https://files.mdnice.com/user/13208/f7a78e9f-0d51-4ec1-a91f-16dfb88fe8d6.png)
+![](https://cdn.jsdelivr.net/gh/helemile/notes@main/img_sp4/55.gif)
 
 庆祝一会儿，然后开始接下来的进阶操作
 
@@ -304,13 +304,13 @@ findByNameOrderByCreateTimeDesc(String name)
 
 调用，并运行服务之后，结果如下：
 
-![](https://files.mdnice.com/user/13208/113e7b49-9878-4fad-bec9-93e4882e573f.png)
+![](https://cdn.jsdelivr.net/gh/helemile/notes@main/img_sp4/6.jpeg)
 
 打印出的 sql 语句表示：根据姓名查询，并以 **CreateTime** 降序排序
 
 相应地，如果要定义其他查询方法，只需要直接在自定义的 **Repository** 中直接按照第一节中的方法定义规则进行定义即可，具体规则可以查看包 **org.springframework.data.repository.query.parser** 中的各类，比如 **PartTree** 类：
 
-![](https://files.mdnice.com/user/13208/cb248143-539c-4f6d-b994-da59eca798d5.png)
+![](https://cdn.jsdelivr.net/gh/helemile/notes@main/img_sp4/7.jpeg)
 
 **Tips:**
 **JPA** 也有专门的 **@Query** 注解以及 **JPA Named Queries**，可以分别在方法上或者 xml 文件中自定义 sql，实现更多操作场景，感兴趣的话，大家可以参考官网查看哦~
@@ -325,7 +325,7 @@ findByNameOrderByCreateTimeDesc(String name)
 
 大大解放了 coding 的劳动人民！有木有
 
-![](https://files.mdnice.com/user/13208/f78ddae7-d891-4305-882b-2cfdbf031c1d.png)
+![](https://cdn.jsdelivr.net/gh/helemile/notes@main/img_sp4/8.gif)
 
 但是呢，正如我们所看到的那样，正因为 JPA 将 ORM 封装的太完善了，使得我们操作数据库的灵活性大大降低了。比如我们如果想要实现多表关联的查询、多条件查询等等，都会变得更加复杂
 
@@ -348,7 +348,7 @@ findByNameOrderByCreateTimeDesc(String name)
 本期项目代码已上传到 github~ 有需要的可以参考
 **https://github.com/wangjie0919/Spring-Boot-Notes**
 
-`Spring Boot`往期系列文章回顾：
+往期精彩回顾
 
 [`Spring Boot`（三）：操作数据库-Spring JDBC](https://mp.weixin.qq.com/s?__biz=MzIwMTY3NjY3MA==&mid=2247483779&idx=1&sn=6ce5bbd2d8028b176ecf3b1b7fa8f3ea&chksm=96eb0392a19c8a84f1e7356a36012a2ef2f17f4d70f60c83ea42c1e72ed5a561c18d1782577e&scene=21#wechat_redirect)
 
