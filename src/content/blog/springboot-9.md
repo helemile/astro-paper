@@ -1,5 +1,5 @@
 ---
-title: Spring Boot（八）：Spring Boot的监控法宝：Actuator
+title: Spring Boot（九）：注册中心Eureka-服务端视角
 author: 杰哥
 pubDatetime: 2023-08-29T16:08:06.130Z
 postSlug: spring-boot-8
