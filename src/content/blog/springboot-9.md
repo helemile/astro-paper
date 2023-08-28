@@ -1,7 +1,7 @@
 ---
 title: Spring Boot（八）：Spring Boot的监控法宝：Actuator
 author: 杰哥
-pubDatetime: 2023-08-26T16:08:06.130Z
+pubDatetime: 2023-08-29T16:08:06.130Z
 postSlug: spring-boot-8
 featured: false
 draft: false
