@@ -191,14 +191,3 @@ spring-jdbc 依赖：spring-boot-starter-jdbc
 以后，我会继续以这种原理+实战的方式，来讲述`Spring Boot`的功能点。这样学习效率可能更高。建议大家实战结束以后，再返回看一遍原理，效果会更佳哦
 
 如果你感觉到自己学到了很多，或者复习到了很多技能点，就快来关注我，一起继续学下去吧~
-
-本期项目代码已上传到 github~有需要的可以参考
-
-```
-https://github.com/wangjie0919/Spring-Boot-Notes
-```
-
-`Spring Boot`往期系列文章回顾：
-
-1. [`Spring Boot`（一）：特性概览](https://mp.weixin.qq.com/s?__biz=MzIwMTY3NjY3MA==&mid=2247483725&idx=1&sn=c1399fcb817d5a434f272b93abd36798&chksm=96eb035ca19c8a4ac715cf62f4cfe301e0124e7b800c87b3ae78503190bbb8ec5e2754ce3fd4&scene=21#wechat_redirect)
-2. [`Spring Boot`（二）：第一个`Spring Boot`项目](https://mp.weixin.qq.com/s?__biz=MzIwMTY3NjY3MA==&mid=2247483751&idx=1&sn=90bb32f21dbfd6793b899ac4cb04d52f&chksm=96eb0376a19c8a60eb9ea0b8227b3e34d55efb0feb6e1aa944d90514333f2be70635b8bc820c&scene=21#wechat_redirect)

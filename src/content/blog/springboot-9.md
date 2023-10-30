@@ -372,23 +372,3 @@ eureka 通过一套监听机制，分别对服务进行注册，状态变更同�
 下期预告：
 
 Spring Boot(十)：注册中心 Eureka-客户端视角
-
-本期项目代码已上传到 github~有需要的可以参考
-
-https://github.com/wangjie0919/Spring-Boot-Notes
-
-往期精彩回顾
-
-[`Spring Boot（七）`：你不能不知道的 Mybatis 缓存机制！](https://mp.weixin.qq.com/s?__biz=MzIwMTY3NjY3MA==&mid=2247483890&idx=1&sn=ceb10a1619ef4270e8a8d38b1e91af25&chksm=96eb03e3a19c8af5b5846f72b578ee9fdb207603d5658a79d721a97e456ee1f0b9ca1e946a61&scene=21#wechat_redirect)
-
-[`Spring Boot`（六）：Spring Boot（六）：那些好用的数据库连接池们](https://mp.weixin.qq.com/s?__biz=MzIwMTY3NjY3MA==&mid=2247483845&idx=1&sn=b604205c54cbf132a0a3a0d9fd035bba&chksm=96eb03d4a19c8ac207645109ed636d89d781daa27bf5e1290393f04ef45aa9453073d4fa9c76&token=1019255373&lang=zh_CN#rd)
-
-[`Spring Boot`（五）：春眠不觉晓，Mybatis 知多少](https://mp.weixin.qq.com/s?__biz=MzIwMTY3NjY3MA==&mid=2247483821&idx=1&sn=7c5ed87610b93589266106d1b07191d1&chksm=96eb03bca19c8aaa5967520fe03381481020450834e7b4e518dd729dc38b71c4cb50154d7e8d&token=1060450670&lang=zh_CN#rd)
-
-[`Spring Boot`（四）：让人又爱又恨的 JPA](https://mp.weixin.qq.com/s?__biz=MzIwMTY3NjY3MA==&mid=2247483799&idx=1&sn=f0a553daf412aefeb2f7877970b04aca&chksm=96eb0386a19c8a90c15b1dae13d39546a2d01875d3f3489c2e2f709a97f8f8ca87bee4ec58e0&token=1060450670&lang=zh_CN#rd)
-
-[`Spring Boot`（三）：操作数据库-Spring JDBC](https://mp.weixin.qq.com/s?__biz=MzIwMTY3NjY3MA==&mid=2247483779&idx=1&sn=6ce5bbd2d8028b176ecf3b1b7fa8f3ea&chksm=96eb0392a19c8a84f1e7356a36012a2ef2f17f4d70f60c83ea42c1e72ed5a561c18d1782577e&scene=21#wechat_redirect)
-
-[`Spring Boot`（二）：第一个`Spring Boot`项目](https://mp.weixin.qq.com/s?__biz=MzIwMTY3NjY3MA==&mid=2247483751&idx=1&sn=90bb32f21dbfd6793b899ac4cb04d52f&chksm=96eb0376a19c8a60eb9ea0b8227b3e34d55efb0feb6e1aa944d90514333f2be70635b8bc820c&scene=21#wechat_redirect)
-
-[`Spring Boot`（一）：特性概览](https://mp.weixin.qq.com/s?__biz=MzIwMTY3NjY3MA==&mid=2247483725&idx=1&sn=c1399fcb817d5a434f272b93abd36798&chksm=96eb035ca19c8a4ac715cf62f4cfe301e0124e7b800c87b3ae78503190bbb8ec5e2754ce3fd4&scene=21#wechat_redirect)
